@@ -26,7 +26,7 @@
     <h3 id="contact-title">Контактна форма</h3>
     <p style="color:var(--muted)">Залиште повідомлення — js обробить візуально (без реального відправлення).</p>
 
-    <form id="contactForm" onsubmit="handleSubmit(event)" novalidate>
+    <form id="contactForm" action="https://formspree.io/f/mqaylvvy" method="POST">
         <div class="row">
             <div class="col">
                 <label for="name">Ім'я</label>
@@ -34,7 +34,7 @@
             </div>
             <div class="col">
                 <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+                <input id="email" name="_replyto" type="email" placeholder="you@example.com" required />
             </div>
         </div>
 
@@ -55,6 +55,7 @@
             <div id="formResult" style="margin-left:auto; color:var(--muted); font-size:13px;"></div>
         </div>
     </form>
+
 </article>
 
 <script src="js/contacts.js"></script>

@@ -31,6 +31,32 @@ function showResult(text, isError){
     setTimeout(()=> el.textContent = '', 6000);
 }
 
+const form = document.getElementById('contactForm');
+const formResult = document.getElementById('formResult');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault(); // предотвращаем стандартную отправку
+
+    const data = new FormData(form);
+
+    fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+    })
+        .then(response => {
+            if (response.ok) {
+                formResult.textContent = "Повідомлення відправлено!";
+                form.reset();
+            } else {
+                formResult.textContent = "Помилка відправки. Спробуйте пізніше.";
+            }
+        })
+        .catch(() => {
+            formResult.textContent = "Помилка відправки. Спробуйте пізніше.";
+        });
+});
+
 document.querySelectorAll('a, button, input, select, textarea, .project').forEach(el=>{
     if(!el.hasAttribute('tabindex')) el.setAttribute('tabindex','0');
 });
