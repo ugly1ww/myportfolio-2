@@ -98,3 +98,116 @@ th{
     font-weight:600;
     font-size:16px;
 }
+
+/* Планшеты: 481px – 900px */
+@media (max-width:900px){
+    .container {
+        grid-template-columns: 1fr; /* одна колонка */
+        padding: 16px;
+    }
+    .avatar {
+        height: 180px;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    .subtitle {
+        font-size: 12px;
+    }
+    .contacts div {
+        font-size: 13px;
+    }
+    .skills .skill {
+        font-size: 12px;
+        padding: 4px 6px;
+    }
+    .hero {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+    table {
+        font-size: 13px;
+    }
+}
+
+/* Мобильные телефоны: до 480px */
+@media (max-width:480px){
+    body {
+        padding: 16px 8px;
+    }
+    .menu-btn, .menu-btn1, .menu-btn2 {
+        top: 8px;
+        right: 8px;
+        padding: 8px;
+    }
+    .avatar {
+        height: 150px;
+    }
+    h1 {
+        font-size: 16px;
+    }
+    .subtitle {
+        font-size: 11px;
+    }
+    .contacts div {
+        font-size: 12px;
+    }
+    .skills .skill {
+        font-size: 11px;
+        padding: 3px 5px;
+    }
+    .panel, .panel1 {
+        padding: 12px;
+    }
+    .hero {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .buttons {
+        flex-direction: column;
+        gap: 6px;
+    }
+    table, th, td {
+        font-size: 12px;
+        padding: 6px 4px;
+    }
+    article {
+        margin-top: 6em;
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+    }
+    .frame {
+        height: 250px;
+    }
+}
+
+@media (max-width:480px){
+    .menu, .menu1, .menu2 {
+        top: 50px;
+        right: 5px;
+        width: 90%;
+        padding: 8px;
+    }
+    .menu a, .menu1 a, .menu2 a {
+        padding: 8px 6px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width:480px){
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    th, td {
+        text-align: center;
+        padding: 6px 8px;
+    }
+}
+
