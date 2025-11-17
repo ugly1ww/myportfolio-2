@@ -16,15 +16,21 @@ html,body{
 }
 
 body{
+    font-family: "IBM Plex Sans", sans-serif;
     background-image:
             linear-gradient(180deg, rgba(2,6,23,0.6), rgba(2,6,23,0.6)),
-            url('../img/background.jpg');
+            url('../img/backg.jpg');
     background-size: cover;
     background-position: center;
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
     padding: 32px 16px;
     box-sizing: border-box;
+}
+
+#intro-title{
+    color: #ff3561;
+    text-shadow: 0 0 15px rgb(0, 0, 0);
 }
 
 .menu-btn {

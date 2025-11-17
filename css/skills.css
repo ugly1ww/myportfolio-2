@@ -1,9 +1,10 @@
 html,body{height:100%; margin:0; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: var(--bg); color:#e6eef6;}
 
 body{
+    font-family: "IBM Plex Sans", sans-serif;
     background-image:
             linear-gradient(180deg, rgba(2,6,23,0.6), rgba(2,6,23,0.6)),
-            url('../img/background.jpg');
+            url('../img/backg.jpg');
     background-size: cover;
     background-position: center;
     -webkit-font-smoothing:antialiased;
@@ -97,6 +98,11 @@ th{
     color:var(--muted);
     font-weight:600;
     font-size:16px;
+}
+
+#skills-title1{
+    color: #ff3561;
+    text-shadow: 0 0 15px rgb(0, 0, 0);
 }
 
 /* Планшеты: 481px – 900px */
