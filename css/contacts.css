@@ -144,6 +144,18 @@ textarea{
     width:98%;
 }
 
+#formResult {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+#formResult.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 /* Планшеты: 481px – 900px */
 @media (max-width:900px){
     .container {
