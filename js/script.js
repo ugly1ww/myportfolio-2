@@ -7,7 +7,7 @@ menuBtn.addEventListener('click', () => {
 
 document.querySelectorAll('.project').forEach(p => {
     p.addEventListener('click', () => openLightbox(p.dataset.full || p.querySelector('img').src));
-    p.addEventListener('keydown', (e)=> { if(e.key==='Enter') openLightbox(p.dataset.full||p.querySelector('img').src); });
+    p.addEventListener('keydown', (e) => { if (e.key === 'Enter') openLightbox(p.dataset.full || p.querySelector('img').src); });
 });
 
 /*// обробка форми муляж, без відправлення на сервер
@@ -37,3 +37,31 @@ document.querySelectorAll('a, button, input, select, textarea, .project').forEac
     if(!el.hasAttribute('tabindex')) el.setAttribute('tabindex','0');
 });*/
 
+const city = "Soria";
+
+async function getWeather() {
+    const url = `https://wttr.in/${city}?format=j1`;
+
+    try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error("Помилка запиту");
+
+        const data = await response.json();
+
+        const current = data.current_condition[0];
+        const weatherInfo = document.getElementById("weather-info");
+
+        weatherInfo.innerHTML = `
+        <p><strong>${city}</strong></p>
+        <p>${current.weatherDesc[0].value}</p>
+        <p>🌡️ Температура: ${current.temp_C}°C</p>
+        <p>💨 Вітер: ${current.windspeedKmph} км/год</p>
+        <p>💧 Вологість: ${current.humidity}%</p>
+    `;
+    } catch (error) {
+        document.getElementById("weather-info").innerText = "Помилка завантаження даних.";
+        console.error(error);
+    }
+}
+
+getWeather();

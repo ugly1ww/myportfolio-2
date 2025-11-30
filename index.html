@@ -1,90 +1,106 @@
 <!doctype html>
 <html lang="uk">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Візитка — Черній Димитрій Максимович | Fullstack Developer</title>
     <meta name="description" content="Візитна картка студента — Fullstack розробник. Контакти, портфоліо, навички." />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23007acc'/%3E%3Ctext x='50' y='57' font-size='40' text-anchor='middle' fill='white' font-family='Arial'%3EF%3C/text%3E%3C/svg%3E" />
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23007acc'/%3E%3Ctext x='50' y='57' font-size='40' text-anchor='middle' fill='white' font-family='Arial'%3EF%3C/text%3E%3C/svg%3E" />
     <link rel="stylesheet" href="css/main.css" />
 
 </head>
+
 <body>
 
-<div class="menu-btn" id="menu-btn">
-    <div></div>
-    <div></div>
-    <div></div>
-</div>
+    <div class="menu-btn" id="menu-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 
-<nav class="menu" id="menu">
-    <a href="index.html">Головна</a>
-    <a href="skills.html">Навички</a>
-    <a href="contacts.html">Контакти</a>
-</nav>
+    <nav class="menu" id="menu">
+        <a href="index.html">Головна</a>
+        <a href="skills.html">Навички</a>
+        <a href="contacts.html">Контакти</a>
+    </nav>
 
-<div class="container" role="main">
-    <aside class="card" aria-label="Візитка">
-        <div class="avatar" title="Фото">
-            <img src="img/avatar.jpg" alt="Фото Чернія Димитрія Максимовича"/>
-        </div>
+    <section id="weather" class="weather-section">
+        <h2>Погода в моєму місті</h2>
+        <div id="weather-info">Завантаження даних...</div>
+    </section>
 
-        <div>
-            <h1>Черній Димитрій Максимович</h1>
-            <div class="subtitle">Студент ХНТУ — Факультет інформаційних технологій та дизайну<br><strong>Спеціальність:</strong> 123 «Комп’ютерна інженерія», бакалавр, 3 курс, група 3КСМ</div>
-        </div>
-
-        <div class="contacts">
-            <div><strong>Напрям:</strong> Fullstack розробка</div>
-            <div><strong>Email:</strong> <a href="mailto:uglyheart.mp3@gmail.com">uglyheart.mp3@gmail.com</a></div>
-            <div><strong>Телефон:</strong> <a href="tel:+380501234567">+380 98 508 63 19</a></div>
-            <div><strong>Лінк:</strong> <a href="https://github.com/ugly1ww" target="_blank" rel="noopener">GitHub / ugly1ww</a></div>
-        </div>
-
-        <div style="margin-top:8px">
-            <span class="badge">Fullstack • HTML • CSS • JS</span>
-        </div>
-
-        <div style="margin-top:8px">
-            <div style="font-size:13px; color:var(--muted); margin-bottom:6px">Ключові навички</div>
-            <div class="skills">
-                <span class="skill">HTML5</span>
-                <span class="skill">CSS3 (Flex/Grid)</span>
-                <span class="skill">JavaScript(Навчаюсь)</span>
-                <span class="skill">Node.js(Навчаюсь)</span>
-                <span class="skill">React(Навчаюсь)</span>
-                <span class="skill">Git(Навчаюсь)</span>
+    <div class="container" role="main">
+        <aside class="card" aria-label="Візитка">
+            <div class="avatar" title="Фото">
+                <img src="img/avatar.jpg" alt="Фото Чернія Димитрія Максимовича" />
             </div>
-        </div>
-    </aside>
 
-    <section class="content" aria-label="Основна інформація">
-        <article class="panel hero" aria-labelledby="intro-title">
-            <div class="intro">
-                <h2 id="intro-title">Коротко про мене</h2>
-                <p style="color:var(--muted); margin-top:6px;">
-                    Я — майбутній Fullstack розробник, зацікавлений у створенні інтерфейсів і серверної логіки. Маю досвід верстки адаптивних інтерфейсів (HTML/CSS), роботи з JavaScript та трохи React, знайомий з Node.js і реляційними БД.
-                </p>
-
-                <div class="buttons">
-                    <a class="btn" href="#">Портфоліо</a>
-                    <a class="btn" href="contacts.html">Зв'язатися</a>
+            <div>
+                <h1>Черній Димитрій Максимович</h1>
+                <div class="subtitle">Студент ХНТУ — Факультет інформаційних технологій та
+                    дизайну<br><strong>Спеціальність:</strong> 123 «Комп’ютерна інженерія», бакалавр, 3 курс, група 3КСМ
                 </div>
             </div>
 
-            <div style="width:260px; min-width:200px;">
-                <div style="background:linear-gradient(180deg, rgba(0,122,204,0.06), rgba(0,168,255,0.03)); padding:10px; border-radius:8px;">
-                    <strong style="font-size:14px; display:block; margin-bottom:8px;">Переваги в професії</strong>
-                    <ul style="margin:0; padding-left:18px; color:var(--muted); font-size:14px;">
-                        <li>Швидке прототипування UI</li>
-                        <li>Кросплатформна розробка</li>
-                        <li>Оптимізація продуктивності</li>
-                    </ul>
+            <div class="contacts">
+                <div><strong>Напрям:</strong> Fullstack розробка</div>
+                <div><strong>Email:</strong> <a href="mailto:uglyheart.mp3@gmail.com">uglyheart.mp3@gmail.com</a></div>
+                <div><strong>Телефон:</strong> <a href="tel:+380501234567">+380 98 508 63 19</a></div>
+                <div><strong>Лінк:</strong> <a href="https://github.com/ugly1ww" target="_blank" rel="noopener">GitHub /
+                        ugly1ww</a></div>
+            </div>
+
+            <div style="margin-top:8px">
+                <span class="badge">Fullstack • HTML • CSS • JS</span>
+            </div>
+
+            <div style="margin-top:8px">
+                <div style="font-size:13px; color:var(--muted); margin-bottom:6px">Ключові навички</div>
+                <div class="skills">
+                    <span class="skill">HTML5</span>
+                    <span class="skill">CSS3 (Flex/Grid)</span>
+                    <span class="skill">JavaScript(Навчаюсь)</span>
+                    <span class="skill">Node.js(Навчаюсь)</span>
+                    <span class="skill">React(Навчаюсь)</span>
+                    <span class="skill">Git(Навчаюсь)</span>
                 </div>
             </div>
-        </article>
+        </aside>
 
-<!--        <article class="panel" aria-labelledby="skills-title">
+        <section class="content" aria-label="Основна інформація">
+            <article class="panel hero" aria-labelledby="intro-title">
+                <div class="intro">
+                    <h2 id="intro-title">
+                        <bold>Коротко</bold> про мене
+                    </h2>
+                    <p style="color:var(--muted); margin-top:6px;">
+                        Я — майбутній Fullstack розробник, зацікавлений у створенні інтерфейсів і серверної логіки. Маю
+                        досвід верстки адаптивних інтерфейсів (HTML/CSS), роботи з JavaScript та трохи React, знайомий з
+                        Node.js і реляційними БД.
+                    </p>
+
+                    <div class="buttons">
+                        <a class="btn" href="#">Портфоліо</a>
+                        <a class="btn" href="contacts.html">Зв'язатися</a>
+                    </div>
+                </div>
+
+                <div style="width:260px; min-width:200px;">
+                    <div
+                        style="background:linear-gradient(180deg, rgba(0,122,204,0.06), rgba(0,168,255,0.03)); padding:10px; border-radius:8px;">
+                        <strong style="font-size:14px; display:block; margin-bottom:8px;">Переваги в професії</strong>
+                        <ul style="margin:0; padding-left:18px; color:var(--muted); font-size:14px;">
+                            <li>Швидке прототипування UI</li>
+                            <li>Кросплатформна розробка</li>
+                            <li>Оптимізація продуктивності</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!--        <article class="panel" aria-labelledby="skills-title">
             <h3 id="skills-title">Навички (рівень)</h3>
             <table>
                 <thead>
@@ -100,21 +116,21 @@
             </table>
         </article>-->
 
-        <article class="panel" aria-labelledby="frame-title">
-            <h3 id="frame-title">Резюме (фрейм)</h3>
-            <div class="frame">
-                <!-- iframe можна вбудувати на реальний документ; для прикладу about:blank -->
-                <iframe srcdoc='
+            <article class="panel" aria-labelledby="frame-title">
+                <h3 id="frame-title">Резюме (фрейм)</h3>
+                <div class="frame">
+                    <!-- iframe можна вбудувати на реальний документ; для прикладу about:blank -->
+                    <iframe srcdoc='
             <style>body{font-family:Arial, sans-serif;color:#012;background:#fff;padding:18px;margin:0}h4{margin:0 0 6px 0}p{margin:0 0 8px 0;color:#333}</style>
             <h4>Резюме — Черній Димитрій</h4>
             <p>У майбутньому Fullstack розробник. Досвід: адаптивна верстка, SPA, бази даних. Шукаю практичні проєкти для розвитку.</p>
             <p><strong>Освіта:</strong> ХНТУ, ФІТД, 3 курс.</p>
             <p><strong>Контакти:</strong> uglyheart.mp3@gmail.com</p>' title="Резюме вбудоване">
-                </iframe>
-            </div>
-        </article>
+                    </iframe>
+                </div>
+            </article>
 
-        <!--<article id="contacts" class="panel" aria-labelledby="contact-title">
+            <!--<article id="contacts" class="panel" aria-labelledby="contact-title">
             <h3 id="contact-title">Контактна форма</h3>
             <p style="color:var(&#45;&#45;muted)">Залиште повідомлення — js обробить візуально (без реального відправлення).</p>
 
@@ -149,9 +165,10 @@
             </form>
         </article>-->
 
-    </section>
-</div>
+        </section>
+    </div>
 
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
