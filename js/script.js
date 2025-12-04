@@ -64,4 +64,15 @@ async function getWeather() {
     }
 }
 
-getWeather();
+const audit = {
+    performance: Math.floor(Math.random() * 40) + 60,
+    seo: Math.floor(Math.random() * 30) + 70,
+    accessibility: Math.floor(Math.random() * 20) + 80
+};
+
+document.getElementById("audit").innerHTML = `
+    <h3>Аналіз сайту</h3>
+    <p>Продуктивність: ${audit.performance}%</p>
+    <p>SEO: ${audit.seo}%</p>
+    <p>Доступність: ${audit.accessibility}%</p>
+`;
